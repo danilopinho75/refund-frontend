@@ -1,11 +1,14 @@
 import { Routes, Route } from 'react-router';
 
 import { Signin } from '../pages/Signin';
+import { AuthLayout } from '../components/AuthLayout';
 
 export function AuthRoutes() {
   return (
     <Routes>
-      <Route path='/' element={<Signin />} />
+      <Route path='/' element={<AuthLayout />}>
+        <Route path='/' element={<Signin />} />
+      </Route>
     </Routes>
   );
 }
