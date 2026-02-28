@@ -1,3 +1,10 @@
+import { Input } from "../components/Input";
+import { Button } from "../components/Button";
+
 export function Signin() {
-  return <h1 className="text-3xl text-cyan-700 font-bold">Signin</h1>
+  return <form className="w-full flex flex-col gap-4">
+    <Input required legend="E-mail" type="email" placeholder="seu@email.com" />
+    <Input required legend="Senha" type="password" placeholder="sua senha" />
+    <Button>Entrar</Button>
+  </form>
 }
